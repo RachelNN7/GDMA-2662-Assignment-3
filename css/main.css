@@ -1,0 +1,438 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+    TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+        -Universal
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        -img
+        -content
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - alignment	 
+        - screen reader   
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+    3.0 - GENERIC
+-------------------------------------------------------------- */
+
+/* ----- UNIVERSAL ----- */
+*, 
+*:after,
+*:before {
+    -moz-box-sizing: border-box;
+    -o-box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font: 1rem 'EB Garamond', serif;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENTS
+-------------------------------------------------------------- */
+/*------ Typography------- */
+h1 {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+    5.0 - Objects
+-------------------------------------------------------------- */
+
+/* ----- Framework ----- */
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+[class*='col-'] {
+    padding: .6rem;
+}
+
+.col-sm-1 {
+    width: calc(100% * 1 / 12);
+}
+
+.col-sm-2 {
+    width: calc(100% * 2 / 12);
+}
+
+.col-sm-3 {
+    width: calc(100% * 3 / 12);
+}
+
+.col-sm-4 {
+    width: calc(100% * 4 / 12);
+}
+
+.col-sm-5 {
+    width: calc(100% * 5 / 12);
+}
+.col-sm-6 {
+    width: calc(100% * 6 / 12);
+}
+
+.col-sm-7 {
+    width: calc(100% * 7 / 12);
+}
+
+.col-sm-8 {
+    width: calc(100% * 8 / 12);
+}
+
+.col-sm-9 {
+    width: calc(100% * 9 / 12);
+}
+
+.col-sm-10 {
+    width: calc(100% * 10 / 12);
+}
+
+.col-sm-11 {
+    width: calc(100% * 11 / 12);
+}
+
+.col-sm-12 {
+    width: calc(100% * 12 / 12);
+}
+
+@media screen and (min-width: 768px) {
+
+    .wrapper {
+        width:80%;
+    }
+
+    [class*='col-'] {
+        padding: .5rem;
+    }
+
+    .img-responsive {
+        max-width: 80%;
+    }
+
+    .col-md-1 {
+        width: calc(100% * 1 / 12);
+    }
+
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+    
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+    
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+    
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+    
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+    
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+    
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+    
+    .col-md-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .wrapper {
+        width:70%;
+    }
+
+    [class*='col-'] {
+        padding: .4rem;
+    }
+
+    .col-lg-1 {
+        width: calc(100% * 1 / 12);
+    }
+
+    .col-lg-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-lg-3 {
+        width: calc(100% * 3 / 12);
+    }
+
+    .col-lg-4 {
+        width: calc(100% * 4 / 12);
+    }
+    
+    .col-lg-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-lg-6 {
+        width: calc(100% * 6 / 12);
+    }
+    
+    .col-lg-7 {
+        width: calc(100% * 7 / 12);
+    }
+    
+    .col-lg-8 {
+        width: calc(100% * 8 / 12);
+    }
+    
+    .col-lg-9 {
+        width: calc(100% * 9 / 12);
+    }
+    
+    .col-lg-10 {
+        width: calc(100% * 10 / 12);
+    }
+    
+    .col-lg-11 {
+        width: calc(100% * 11 / 12);
+    }
+    
+    .col-lg-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+/*--------------------------------------------------------------
+    6.0 - COMPONENTS
+-------------------------------------------------------------- */
+ul,
+#main-text {
+    color: #fff;
+}
+
+#bg-index .col-md-6,
+.images {
+    padding: 0;
+}
+
+#main-text p a,
+#opening {
+    text-transform: uppercase;
+}
+
+#main-text a,
+#main-text a:hover {
+    transition: 600ms ease-in-out;
+}
+
+#main-text,
+#bg-index .col-sm-12 .col-sm-12,
+#hero ul,
+#hero .col-md-5,
+#sustainability  {
+    text-align: center;
+}
+
+
+
+/* ----- content----- */
+#opening {
+    font: 2.2rem/3rem 'Montserrat', sans-serif;
+    margin: 0;
+    font-weight: 700;
+}
+
+#hero .row + div {
+    padding: 5rem 0 7rem 0;
+}
+
+#main-text p {
+    margin: 0;
+}
+
+#main-text span {
+    font: 2rem EB Garamond, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#main-text a {
+    background-color: #4e9374;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    font-weight: 500;
+}
+
+#sustainability h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+
+/* -----bg-colors----- */
+#main-text a:hover {
+    background-color: #1d6d49;
+}
+
+#bg-different {
+    background-color: #1d6d49;
+}
+
+#bg-green {
+    background-color: #4e9374;
+}
+
+
+/* -----nav----- */
+li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+a {
+    padding: 0 .8rem;
+    text-decoration: none;
+    font: .9rem 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+#hero ul {
+    padding-left: 0;
+    margin-top: 0
+}
+
+header .row a:hover {
+    color: #000000;
+}
+
+.special {
+    border-radius: 3rem;
+    padding: .3rem 1rem;
+    background-color: #fff;
+    color: #4e9374;
+}
+
+
+
+
+
+/* ----- Images----- */
+#hero {
+    background: url(../img/hero-man.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    #hero ul {
+        text-align: right;
+        margin-top: 3rem;
+    }
+
+    #opening {
+        font: 6.5rem/8rem 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-stretch: expanded;
+    }
+
+    #hero .col-md-5 {
+        text-align: left;
+    }
+
+    #main-text span {
+        font-size: 4rem;
+    }
+
+    .special {
+        border: #fff 2px solid;
+        border-radius: 3rem;
+        padding: .3rem 1rem;
+        background-color: transparent;
+        color: #fff;
+    }
+    
+    .special:hover {
+        background-color: #fff;
+    }
+
+    #hero .row + div {
+        padding: 7rem 0;
+    }
+    
+
+}
+
+
+
+
+/*--------------------------------------------------------------
+    7.0 - UTILITY
+-------------------------------------------------------------- */
+/* ----- alignment ----- */
+.col-center {
+    justify-content: center;
+ }
+
+
+ /*-----  screen reader -----  */
+ .sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
