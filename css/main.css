@@ -274,7 +274,8 @@ h3 {
 -------------------------------------------------------------- */
 ul,
 #main-text,
-i {
+i,
+a {
     color: #fff;
 }
 
@@ -302,6 +303,8 @@ h1 {
 #hero .col-md-5,
 #about ul,
 #about .col-md-5,
+#action ul,
+#action .col-md-5,
 #sustainability  {
     text-align: center;
 }
@@ -315,9 +318,19 @@ h1 {
     transition: 600ms ease-in-out;
 }
 
+a,
+address p:first-child {
+    font: 0.9rem 'Montserrat', sans-serif;
+    font-weight: 600;
+}
 
+#hero ul,
+#about ul,
+#action ul {
+    padding-left: 0;
+    margin-top: 0
+}
 
-/* ----- content----- */
 #opening,
 h1 {
     font: 2.2rem/3rem 'Montserrat', sans-serif;
@@ -325,8 +338,9 @@ h1 {
     font-weight: 700;
 }
 
-#hero .row + div,
-#about .row + div {
+
+/* ----- content----- */
+#main-text {
     padding: 5rem 0 7rem 0;
 }
 
@@ -352,6 +366,8 @@ h1 {
     line-height: 1.8em;
 }
 
+
+
 #bg-index .col-md-6 {
     margin-bottom: 5em;
 }
@@ -362,15 +378,16 @@ h1 {
 
 
 
-/* -----bg-colors----- */
-
-
-#bg-different {
-    background-color: #1d6d49;
+main #sticky {
+    align-self: flex-start;
 }
 
-#bg-green {
-    background-color: #4e9374;
+#sticky {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }
 
 
@@ -383,15 +400,6 @@ li {
 a {
     padding: 0 .8rem;
     text-decoration: none;
-    font: .9rem 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #fff;
-}
-
-#hero ul,
-#about ul {
-    padding-left: 0;
-    margin-top: 0
 }
 
 header .row a:hover {
@@ -406,12 +414,22 @@ header .row a:hover {
 }
 
 
-
-
-
 /* ----- Images----- */
-#hero,
+#hero {
+    background: url(../img/hero-man.jpg) center center no-repeat;
+}
+
 #about {
+    background: url(../img/bg-mountains.jpg) center center no-repeat;
+}
+
+#action {
+    background: url(../img/bg-trees.jpg) center center no-repeat;
+}
+
+#hero,
+#about,
+#action {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -419,12 +437,44 @@ header .row a:hover {
     background-size: cover;
 }
 
-#hero {
-    background: url(../img/hero-man.jpg) center center;
+#mountain {
+    background: url(../img/bg-mountains.jpg) center center no-repeat;
 }
 
-#about {
-    background: url(../img/bg-mountains.jpg);
+#trees {
+    background: url(../img/bg-trees.jpg) center center no-repeat;
+}
+
+#mountain,
+#trees {
+    text-align: center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -ms-background-size: contain;
+    background-size: contain;
+    height: 240px;
+    margin: 0;
+}
+
+/* -----footer----- */
+#bg-different {
+    background-color: #1d6d49;
+}
+
+#bg-green {
+    background-color: #4e9374;
+}
+
+#bg-green i:nth-child(2) {
+    margin: 0 1rem;
+}
+
+address {
+    font-style: normal;
+    color: white;
+    text-align: center;
+    align-items: center;
 }
 
 
@@ -432,9 +482,21 @@ header .row a:hover {
 @media screen and (min-width: 768px) {
 
     #hero ul,
-    #about ul {
+    #about ul,
+    #action ul {
         text-align: right;
         margin-top: 3rem;
+    }
+
+    #hero .col-md-5,
+    #about .col-md-5,
+    #action .col-md-5 {
+        text-align: left;
+    }
+
+    #sustainability header + div,
+    #bg-index header + div {
+        margin: 0 auto;
     }
 
     #opening,
@@ -442,11 +504,6 @@ header .row a:hover {
         font: 6.5rem/8rem 'Montserrat', sans-serif;
         font-weight: 700;
         font-stretch: expanded;
-    }
-
-    #hero .col-md-5,
-    #about .col-md-5 {
-        text-align: left;
     }
 
     #main-text span {
@@ -457,13 +514,8 @@ header .row a:hover {
         width: 55%;
     }
 
-    #sustainability header + div,
     #bg-index header + div {
-        margin: 0 auto;
-    }
-
-    #bg-index header + div {
-        width: 75%;
+        width: 70%;
     }
 
     .special {
@@ -478,9 +530,12 @@ header .row a:hover {
         background-color: #fff;
     }
 
-    #hero .row + div,
-    #about .row + div {
-        padding: 7rem 0;
+    #main-text {
+        padding: 12rem 0;
+    }
+
+    #sticky {
+        width: 30%;
     }
     
 
