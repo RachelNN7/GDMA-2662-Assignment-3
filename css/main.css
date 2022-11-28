@@ -50,10 +50,32 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 /*------ Typography------- */
-h1 {
+#hero h1 {
     margin-bottom: 0;
 }
 
+h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+h3 {
+    font: 1rem/.4rem 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #bdbdbd;
+    letter-spacing: .2rem;
+    font-weight: 700;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+}
 /*--------------------------------------------------------------
     5.0 - Objects
 -------------------------------------------------------------- */
@@ -251,7 +273,8 @@ h1 {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 ul,
-#main-text {
+#main-text,
+i {
     color: #fff;
 }
 
@@ -261,33 +284,49 @@ ul,
 }
 
 #main-text p a,
-#opening {
+#opening,
+h1 {
     text-transform: uppercase;
 }
 
 #main-text a,
-#main-text a:hover {
+#main-text a:hover,
+#bg-index a:hover  {
     transition: 600ms ease-in-out;
+    background-color: #1d6d49;
 }
 
 #main-text,
 #bg-index .col-sm-12 .col-sm-12,
 #hero ul,
 #hero .col-md-5,
+#about ul,
+#about .col-md-5,
 #sustainability  {
     text-align: center;
+}
+
+#main-text a,
+#bg-index a {
+    background-color: #4e9374;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    transition: 600ms ease-in-out;
 }
 
 
 
 /* ----- content----- */
-#opening {
+#opening,
+h1 {
     font: 2.2rem/3rem 'Montserrat', sans-serif;
     margin: 0;
     font-weight: 700;
 }
 
-#hero .row + div {
+#hero .row + div,
+#about .row + div {
     padding: 5rem 0 7rem 0;
 }
 
@@ -301,23 +340,30 @@ ul,
     font-weight: 400;
 }
 
-#main-text a {
-    background-color: #4e9374;
-    border-radius: 2rem;
-    padding: .5rem 1rem;
-    font-weight: 500;
+
+
+#sustainability {
+    margin: 5em 0;
 }
 
-#sustainability h2 {
-    font-size: 1.7rem;
-    font-weight: 500;
+#sustainability header + div {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.8em;
 }
+
+#bg-index .col-md-6 {
+    margin-bottom: 5em;
+}
+
+#bg-index header + div + p {
+    margin-top: 2em;
+}
+
 
 
 /* -----bg-colors----- */
-#main-text a:hover {
-    background-color: #1d6d49;
-}
+
 
 #bg-different {
     background-color: #1d6d49;
@@ -342,7 +388,8 @@ a {
     color: #fff;
 }
 
-#hero ul {
+#hero ul,
+#about ul {
     padding-left: 0;
     margin-top: 0
 }
@@ -363,8 +410,8 @@ header .row a:hover {
 
 
 /* ----- Images----- */
-#hero {
-    background: url(../img/hero-man.jpg) center center;
+#hero,
+#about {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -372,28 +419,51 @@ header .row a:hover {
     background-size: cover;
 }
 
+#hero {
+    background: url(../img/hero-man.jpg) center center;
+}
+
+#about {
+    background: url(../img/bg-mountains.jpg);
+}
 
 
 
 @media screen and (min-width: 768px) {
 
-    #hero ul {
+    #hero ul,
+    #about ul {
         text-align: right;
         margin-top: 3rem;
     }
 
-    #opening {
+    #opening,
+    h1 {
         font: 6.5rem/8rem 'Montserrat', sans-serif;
         font-weight: 700;
         font-stretch: expanded;
     }
 
-    #hero .col-md-5 {
+    #hero .col-md-5,
+    #about .col-md-5 {
         text-align: left;
     }
 
     #main-text span {
         font-size: 4rem;
+    }
+
+    #sustainability header + div {
+        width: 55%;
+    }
+
+    #sustainability header + div,
+    #bg-index header + div {
+        margin: 0 auto;
+    }
+
+    #bg-index header + div {
+        width: 75%;
     }
 
     .special {
@@ -408,7 +478,8 @@ header .row a:hover {
         background-color: #fff;
     }
 
-    #hero .row + div {
+    #hero .row + div,
+    #about .row + div {
         padding: 7rem 0;
     }
     
