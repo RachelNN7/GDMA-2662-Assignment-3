@@ -38,6 +38,7 @@
 
 html {
     font: 1rem 'EB Garamond', serif;
+    text-align: center;
 }
 
 
@@ -50,30 +51,34 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 /*------ Typography------- */
-#hero h1 {
-    margin-bottom: 0;
+h1 {
+    padding: 6rem 0;
 }
 
 h2 {
-    font-size: 1.4rem;
-    font-weight: 400;
+    margin-top: 2em;
 }
 
-h3 {
+h2,
+#bg-hills + main nav a {
     font: 1rem/.4rem 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: #bdbdbd;
     letter-spacing: .2rem;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+main p {
+    margin-top: 0;
+}
+
+ul {
+    padding: 0;
 }
 
 
-
 @media screen and (min-width: 768px) {
-    h2 {
-        font-size: 2rem;
-        font-weight: 400;
-    }
+   
 
 }
 /*--------------------------------------------------------------
@@ -93,11 +98,12 @@ h3 {
 }
 
 .img-responsive {
-    max-width: 100%;
+    max-width: 55%;
+    padding-bottom: 1rem;
 }
 
 [class*='col-'] {
-    padding: .6rem;
+    padding: .8rem 0 3rem 0;
 }
 
 .col-sm-1 {
@@ -157,10 +163,6 @@ h3 {
         padding: .5rem;
     }
 
-    .img-responsive {
-        max-width: 80%;
-    }
-
     .col-md-1 {
         width: calc(100% * 1 / 12);
     }
@@ -217,7 +219,7 @@ h3 {
     }
 
     [class*='col-'] {
-        padding: .4rem;
+        padding: 1rem;
     }
 
     .col-lg-1 {
@@ -272,117 +274,38 @@ h3 {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
-ul,
-#main-text,
+header ul,
+#hero-mountains p,
 i,
-a {
+a,
+h1 {
     color: #fff;
 }
 
-#bg-index .col-md-6,
-.images {
-    padding: 0;
-}
-
-#main-text p a,
-#opening,
+p a,
+#hero-mountains p:first-of-type,
 h1 {
     text-transform: uppercase;
 }
 
-#main-text a,
-#main-text a:hover,
-#bg-index a:hover  {
-    transition: 600ms ease-in-out;
-    background-color: #1d6d49;
-}
-
-#main-text,
-#bg-index .col-sm-12 .col-sm-12,
-#hero ul,
-#hero .col-md-5,
-#about ul,
-#about .col-md-5,
-#action ul,
-#action .col-md-5,
-#sustainability  {
-    text-align: center;
-}
-
-#main-text a,
-#bg-index a {
-    background-color: #4e9374;
-    border-radius: 2rem;
-    padding: .5rem 1rem;
-    font-weight: 500;
-    transition: 600ms ease-in-out;
-}
-
-a,
-address p:first-child {
-    font: 0.9rem 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-#hero ul,
-#about ul,
-#action ul {
-    padding-left: 0;
-    margin-top: 0
-}
-
-#opening,
+#hero-mountains p:first-of-type,
 h1 {
     font: 2.2rem/3rem 'Montserrat', sans-serif;
     margin: 0;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 
 /* ----- content----- */
-#main-text {
-    padding: 5rem 0 7rem 0;
-}
-
-#main-text p {
-    margin: 0;
-}
-
-#main-text span {
+#hero-mountains span {
     font: 2rem EB Garamond, sans-serif;
     font-style: italic;
     font-weight: 400;
+    text-transform: lowercase;
 }
 
-
-
-#sustainability {
-    margin: 5em 0;
-}
-
-#sustainability header + div {
-    width: 100%;
-    margin: 0 auto;
-    line-height: 1.8em;
-}
-
-
-
-#bg-index .col-md-6 {
-    margin-bottom: 5em;
-}
-
-#bg-index header + div + p {
-    margin-top: 2em;
-}
-
-
-
-main #sticky {
+#bg-hills + main nav {
     align-self: flex-start;
-}
-
-#sticky {
     background-color: #ffffff;
     position: sticky;
     top: 0;
@@ -390,7 +313,80 @@ main #sticky {
     z-index: 0;
 }
 
+#bg-hills + main nav p {
+    color: #1d6d49;
+    font-style: italic;
+}
 
+#bg-hills + main nav a:hover {
+    color: #4e9374;
+}
+
+#hero-mountains h1 {
+    padding: 0;
+}
+
+#about {
+    text-align: left;
+}
+
+.intro-p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+main {
+    padding: 6rem 0;
+}
+
+blockquote {
+    text-align: center;
+    border-top: #bcbcbc 1px solid;
+    border-bottom: #bcbcbc 1px solid;
+    margin: 1em 0;
+}
+
+blockquote > p:first-child,
+blockquote footer p {
+    color: #bcbcbc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+blockquote > p:first-child {
+    font-size: 5rem;
+    line-height: 2rem;
+    margin: .5em 0 0;
+}
+
+blockquote p {
+    font-size: 1.2rem;
+}
+
+blockquote footer p {
+    font-size: .8rem;
+}
+
+.intro-p .col-center {
+    padding-top: 0;
+}
+
+#bg-hills + main nav a {
+    letter-spacing: 0;
+    font-size: .8rem;
+}
+
+#achievements li {
+    background: url(../img/icon-tree.png) no-repeat;
+    padding: 0 0 1rem 1.5rem;
+    line-height: 1.4em;
+    text-transform: none;
+}
+
+#achievements .col-md-6 {
+    padding: 0;
+}
 /* -----nav----- */
 li {
     display: inline-block;
@@ -400,36 +396,65 @@ li {
 a {
     padding: 0 .8rem;
     text-decoration: none;
+    font: 0.9rem 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
-header .row a:hover {
-    color: #000000;
+header .row a:hover,
+address a:hover {
+    text-decoration: solid 1px underline;
+    text-underline-offset: .5em;
+    margin-bottom: 1em;
 }
 
-.special {
+header li:last-child a {
     border-radius: 3rem;
     padding: .3rem 1rem;
     background-color: #fff;
     color: #4e9374;
 }
 
+.btn:hover  {
+    background-color: #1d6d49;
+}
+
+.btn {
+    background-color: #4e9374;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    font-weight: 500;
+}
+
+
+
 
 /* ----- Images----- */
-#hero {
-    background: url(../img/hero-man.jpg) center center no-repeat;
+#hero-mountains {
+    background: url(../img/hero-mountain.jpg) center center no-repeat;
+    padding: 0 0 6rem 0;
 }
 
-#about {
-    background: url(../img/bg-mountains.jpg) center center no-repeat;
+#bg-hills {
+    background: url(../img/bg-hills.jpg) center center no-repeat;
 }
 
-#action {
+#bg-trees {
     background: url(../img/bg-trees.jpg) center center no-repeat;
 }
 
-#hero,
-#about,
-#action {
+#hills {
+    background: url(../img/bg-hills.jpg) center center no-repeat;
+}
+
+#trees {
+    background: url(../img/bg-trees.jpg) center center no-repeat;
+}
+
+#hero-mountains,
+#bg-hills,
+#bg-trees,
+#hills,
+#trees {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -437,107 +462,97 @@ header .row a:hover {
     background-size: cover;
 }
 
-#mountain {
-    background: url(../img/bg-mountains.jpg) center center no-repeat;
-}
-
+#hills,
 #trees {
-    background: url(../img/bg-trees.jpg) center center no-repeat;
-}
-
-#mountain,
-#trees {
-    text-align: center;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    -ms-background-size: contain;
-    background-size: contain;
     height: 240px;
     margin: 0;
 }
 
 /* -----footer----- */
-#bg-different {
+body > footer {
     background-color: #1d6d49;
+}
+
+address ul {
+    padding: 2rem 0;
+}
+
+footer ul {
+    margin: 0;
 }
 
 #bg-green {
     background-color: #4e9374;
+    padding: .5rem 0;
 }
 
 #bg-green i:nth-child(2) {
     margin: 0 1rem;
 }
 
-address {
-    font-style: normal;
-    color: white;
-    text-align: center;
-    align-items: center;
-}
 
 
 
 @media screen and (min-width: 768px) {
 
-    #hero ul,
-    #about ul,
-    #action ul {
+    #hero-mountains ul,
+    #bg-hills ul,
+    #bg-trees ul {
         text-align: right;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
-    #hero .col-md-5,
-    #about .col-md-5,
-    #action .col-md-5 {
+    #hero-mountains .col-md-5,
+    #bg-hills .col-md-5,
+    #bg-trees .col-md-5 {
         text-align: left;
     }
 
-    #sustainability header + div,
-    #bg-index header + div {
-        margin: 0 auto;
-    }
-
-    #opening,
+    #hero-mountains p:first-of-type,
     h1 {
-        font: 6.5rem/8rem 'Montserrat', sans-serif;
-        font-weight: 700;
-        font-stretch: expanded;
+        font-size: 6.5rem;
+        line-height: 6rem;
     }
 
-    #main-text span {
+    #hero-mountains span {
         font-size: 4rem;
     }
 
-    #sustainability header + div {
-        width: 55%;
+    #hero-mountains {
+        padding: 0 0 12rem 0;
     }
 
-    #bg-index header + div {
-        width: 70%;
+    h1 {
+        padding: 10rem 0;
     }
 
-    .special {
+    #bg-hills + main nav li {
+        display: block;
+        line-height: 2em;
+    }
+
+    #bg-hills + main nav {
+        text-align: left;
+        padding-left: 0;
+        width: 30%;
+    }
+
+    #bg-hills + main nav a {
+        padding-left: 0;
+    }
+
+    header li:last-child a {
         border: #fff 2px solid;
         border-radius: 3rem;
-        padding: .3rem 1rem;
         background-color: transparent;
         color: #fff;
     }
     
-    .special:hover {
+    header li:last-child a:hover {
         background-color: #fff;
+        color: #4e9374;
+        text-decoration: none;
     }
-
-    #main-text {
-        padding: 12rem 0;
-    }
-
-    #sticky {
-        width: 30%;
-    }
-    
 
 }
 
@@ -554,7 +569,7 @@ address {
 
 
  /*-----  screen reader -----  */
- .sr-only {
+.sr-only {
     position:absolute;
     left:-10000px;
     top:auto;
