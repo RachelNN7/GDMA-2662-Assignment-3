@@ -12,8 +12,22 @@
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
-        -img
+        -groups
         -content
+            -hero-mountain
+            -bg-hills
+            -about
+            -main
+            -intro-p
+            -blockquote
+            -achievements
+            -nav
+            -btn
+            -Images
+            -Images groups
+            -footer
+                -address
+                -bg-primary
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - alignment	 
         - screen reader   
@@ -39,12 +53,8 @@
 html {
     font: 1rem 'EB Garamond', serif;
     text-align: center;
+    margin-top: 0;
 }
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -59,28 +69,11 @@ h2 {
     margin-top: 2em;
 }
 
-h2,
-#bg-hills + main nav a {
-    font: 1rem/.4rem 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    color: #bdbdbd;
-    letter-spacing: .2rem;
-    font-weight: 600;
-}
-
-main p {
-    margin-top: 0;
-}
-
 ul {
     padding: 0;
 }
 
 
-@media screen and (min-width: 768px) {
-   
-
-}
 /*--------------------------------------------------------------
     5.0 - Objects
 -------------------------------------------------------------- */
@@ -274,6 +267,7 @@ ul {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+/* -----groups----- */
 header ul,
 #hero-mountains p,
 i,
@@ -284,119 +278,44 @@ h1 {
 
 p a,
 #hero-mountains p:first-of-type,
-h1 {
+h1,
+li {
     text-transform: uppercase;
 }
 
 #hero-mountains p:first-of-type,
 h1 {
     font: 2.2rem/3rem 'Montserrat', sans-serif;
-    margin: 0;
     font-weight: 800;
 }
 
-
-/* ----- content----- */
-#hero-mountains span {
-    font: 2rem EB Garamond, sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    text-transform: lowercase;
+h2,
+#bg-hills + main nav a {
+    font: 1rem/.4rem 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #bdbdbd;
+    letter-spacing: .2rem;
 }
 
-#bg-hills + main nav {
-    align-self: flex-start;
-    background-color: #ffffff;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 0;
+#hills,
+#trees,
+#hero-mountains p:first-of-type,
+h1,
+footer ul  {
+    margin: 0;
 }
 
-#bg-hills + main nav p {
-    color: #1d6d49;
-    font-style: italic;
-}
-
-#bg-hills + main nav a:hover {
-    color: #4e9374;
-}
-
-#hero-mountains h1 {
-    padding: 0;
-}
-
-#about {
-    text-align: left;
-}
-
-.intro-p {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-main {
-    padding: 6rem 0;
-}
-
-blockquote {
-    text-align: center;
-    border-top: #bcbcbc 1px solid;
-    border-bottom: #bcbcbc 1px solid;
-    margin: 1em 0;
-}
 
 blockquote > p:first-child,
 blockquote footer p {
     color: #bcbcbc;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
 }
 
-blockquote > p:first-child {
-    font-size: 5rem;
-    line-height: 2rem;
-    margin: .5em 0 0;
-}
-
-blockquote p {
-    font-size: 1.2rem;
-}
-
-blockquote footer p {
-    font-size: .8rem;
-}
-
-.intro-p .col-center {
-    padding-top: 0;
-}
-
-#bg-hills + main nav a {
-    letter-spacing: 0;
-    font-size: .8rem;
-}
-
-#achievements li {
-    background: url(../img/icon-tree.png) no-repeat;
-    padding: 0 0 1rem 1.5rem;
-    line-height: 1.4em;
-    text-transform: none;
-}
-
-#achievements .col-md-6 {
-    padding: 0;
-}
-/* -----nav----- */
-li {
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-a {
-    padding: 0 .8rem;
-    text-decoration: none;
-    font: 0.9rem 'Montserrat', sans-serif;
+a,
+h2,
+#bg-hills + main nav a,
+blockquote {
     font-weight: 600;
 }
 
@@ -407,25 +326,152 @@ address a:hover {
     margin-bottom: 1em;
 }
 
+#hero-mountains span,
+#bg-hills + main nav p {
+    font-style: italic;
+}
+
+#bg-hills + main nav,
 header li:last-child a {
-    border-radius: 3rem;
-    padding: .3rem 1rem;
     background-color: #fff;
-    color: #4e9374;
 }
 
-.btn:hover  {
-    background-color: #1d6d49;
-}
-
-.btn {
-    background-color: #4e9374;
-    border-radius: 2rem;
-    padding: .5rem 1rem;
+.btn,
+.intro-p {
     font-weight: 500;
 }
 
+.btn:hover,
+body > footer  {
+    background-color: #1d6d49;
+}
 
+#bg-green,
+.btn {
+    background-color: #4e9374;
+}
+
+#bg-hills + main nav a,
+blockquote footer p {
+    font-size: 0.8rem;
+}
+
+#bg-hills + main nav a:hover,
+header li:last-child a {
+    color: #4e9374;
+}
+
+
+
+
+/* -----content----- */
+/* -----hero-mountains----- */
+#hero-mountains h1 {
+    padding: 0;
+}
+
+#hero-mountains span {
+    font: 2rem EB Garamond, sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+
+/* -----bg-hills----- */
+#bg-hills + main nav {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+#bg-hills + main nav p {
+    color: #1d6d49;
+}
+
+#bg-hills + main nav a {
+    letter-spacing: 0;
+}
+
+
+/* -----about---- */
+#about {
+    text-align: left;
+}
+
+
+/* -----main----- */
+main {
+    padding: 6rem 0;
+}
+
+
+/* -----intro-p----- */
+.intro-p {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.intro-p .col-center {
+    padding-top: 0;
+}
+
+
+/* -----blockquote----- */
+blockquote {
+    text-align: center;
+    border-top: #bcbcbc 1px solid;
+    border-bottom: #bcbcbc 1px solid;
+    margin: 1em 0;
+}
+
+blockquote p {
+    font-size: 1.2rem;
+}
+
+blockquote > p:first-child {
+    font-size: 5rem;
+    line-height: 2rem;
+    margin: .5em 0 0;
+}
+
+
+/* -----achievements----- */
+#achievements li {
+    background: url(../img/icon-tree.png) no-repeat;
+    padding: 0 0 1rem 1.5rem;
+    line-height: 1.4em;
+    text-transform: none;
+}
+
+#achievements .col-md-6 {
+    padding: 0;
+}
+
+
+/* -----nav----- */
+li {
+    display: inline-block;
+}
+
+a {
+    padding: 0 .8rem;
+    text-decoration: none;
+    font: 0.9rem 'Montserrat', sans-serif;
+}
+
+header li:last-child a {
+    border-radius: 3rem;
+    padding: .3rem 1rem;
+}
+
+
+/* -----btn----- */
+.btn {
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+}
 
 
 /* ----- Images----- */
@@ -450,6 +496,8 @@ header li:last-child a {
     background: url(../img/bg-trees.jpg) center center no-repeat;
 }
 
+
+/* ----- Images groups----- */
 #hero-mountains,
 #bg-hills,
 #bg-trees,
@@ -465,47 +513,69 @@ header li:last-child a {
 #hills,
 #trees {
     height: 240px;
-    margin: 0;
 }
+
 
 /* -----footer----- */
-body > footer {
-    background-color: #1d6d49;
-}
-
+/* -----address----- */
 address ul {
     padding: 2rem 0;
 }
 
-footer ul {
-    margin: 0;
+address li {
+    display: block;
+    padding: 1rem 0;
 }
 
-#bg-green {
-    background-color: #4e9374;
+
+/* -----bg-primary----- */
+#bg-primary {
     padding: .5rem 0;
 }
 
-#bg-green i:nth-child(2) {
+#bg-primary i:nth-child(2) {
     margin: 0 1rem;
 }
 
 
-
-
 @media screen and (min-width: 768px) {
 
+    /* -----groups----- */
     #hero-mountains ul,
     #bg-hills ul,
     #bg-trees ul {
-        text-align: right;
         margin-top: 2rem;
     }
 
     #hero-mountains .col-md-5,
     #bg-hills .col-md-5,
-    #bg-trees .col-md-5 {
+    #bg-trees .col-md-5,
+    #bg-hills + main nav {
         text-align: left;
+    }
+
+    #hero-mountains ul,
+    #bg-hills ul,
+    #bg-trees ul {
+        text-align: right;
+    }
+
+    #bg-hills + main nav a,
+    #bg-hills + main nav {
+        padding-left: 0;
+    }
+
+
+
+    /* -----typography----- */
+    h1 {
+        padding: 10rem 0;
+    }
+
+
+    /* -----hero-mountains----- */
+    #hero-mountains {
+        padding: 0 0 12rem 0;
     }
 
     #hero-mountains p:first-of-type,
@@ -518,29 +588,19 @@ footer ul {
         font-size: 4rem;
     }
 
-    #hero-mountains {
-        padding: 0 0 12rem 0;
-    }
 
-    h1 {
-        padding: 10rem 0;
-    }
-
+    /* -----bg-hill----- */
     #bg-hills + main nav li {
         display: block;
         line-height: 2em;
     }
 
     #bg-hills + main nav {
-        text-align: left;
-        padding-left: 0;
         width: 30%;
     }
 
-    #bg-hills + main nav a {
-        padding-left: 0;
-    }
 
+    /* -----header----- */
     header li:last-child a {
         border: #fff 2px solid;
         border-radius: 3rem;
@@ -554,9 +614,14 @@ footer ul {
         text-decoration: none;
     }
 
+
+    /* -----footer----- */
+    footer li {
+        display: inline;
+        padding: 0;
+    }
+
 }
-
-
 
 
 /*--------------------------------------------------------------
